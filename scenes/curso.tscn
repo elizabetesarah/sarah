@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://xywfpe6p3q3n"]
+
+[ext_resource type="Script" path="res://script/curso.gd" id="1_4q751"]
+[ext_resource type="Texture2D" uid="uid://lfxfedlqhx3j" path="res://Art Assets/Effects/Heart.png" id="2_sqso0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tguqm"]
+size = Vector2(8, 9)
+
+[node name="curso" type="CharacterBody2D"]
+script = ExtResource("1_4q751")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_tguqm")
+
+[node name="Heart" type="Sprite2D" parent="."]
+texture = ExtResource("2_sqso0")

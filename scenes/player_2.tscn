@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://vo0uet0h3w7c"]
+
+[ext_resource type="Script" path="res://script/player.gd" id="1_23hqi"]
+[ext_resource type="Texture2D" uid="uid://sbngdiehboho" path="res://Art Assets/Characters/Duck/Duck (16x16).png" id="2_508tj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tguqm"]
+size = Vector2(6, 15)
+
+[node name="player2" type="CharacterBody2D"]
+script = ExtResource("1_23hqi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_tguqm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(3, -2)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_tguqm")
+
+[node name="pato" type="Sprite2D" parent="."]
+texture = ExtResource("2_508tj")
+hframes = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)

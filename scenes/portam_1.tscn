@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbkqnj8sult8g"]
+
+[ext_resource type="Script" path="res://script/portam_1.gd" id="1_fhwgl"]
+[ext_resource type="Texture2D" uid="uid://oekn7uf2swen" path="res://Art Assets/Props/Door (32x32).png" id="2_dpwbl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gn8rj"]
+size = Vector2(15, 18)
+
+[node name="portam1" type="Area2D"]
+script = ExtResource("1_fhwgl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -5)
+texture = ExtResource("2_dpwbl")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_gn8rj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
